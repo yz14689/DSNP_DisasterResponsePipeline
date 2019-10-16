@@ -1,10 +1,10 @@
 # Project Name 
 Disaster Response Pipeline (Udecity Data Science Narodegree)
 
-# Required packages
+### Required packages
+(see requirements.txt)
 
-
-# Instructions:
+### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
@@ -17,23 +17,29 @@ Disaster Response Pipeline (Udecity Data Science Narodegree)
 
 3. Go to http://0.0.0.0:3001/
 
-# TO DO LIST
+### File used
+
+#### 1. Input data
+disaster_messages.csv 
+disaster_categories.csv
 
 
-## ETL pipeline
-### process.py
+#### 2. ETL pipeline
+#### process.py
     Load the datafiles, merge and clean the combined data, save the cleaned data to SQL database for subsequent use
 
 
-## ML pipeline
-### train_classifer.py
+#### 3. ML pipeline
+#### train_classifer.py
     Load the sql database (from ETL), build a text processing and ML pipeline and multi-output RandomForest classifier. 
     Train and tune the model using GridSearch
     Export the trained model as pickle file
 
 
-## final execution 
-### run.py 
+#### 4. Final execution code 
+#### run.py 
 
 
-## Screenshot of output
+### Screenshot of output
+(TBC)
+
