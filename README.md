@@ -1,5 +1,5 @@
 # Project Name 
-Disaster Response Pipeline (Udecity Data Scientist Narodegree)
+## Disaster Response Pipeline (Udecity Data Scientist Narodegree)
 
 ### Required packages (details see requirements.txt)
 sys
@@ -60,11 +60,7 @@ Input:
         
 Output:
     classifier.pkl
-Inputs:
-
-
-Outputs:
-
+ 
 
 #### 4. Final execution code 
 #### run.py 
@@ -78,7 +74,9 @@ Input:
 Output:
     Model summary
 
-# Go to: http://0.0.0.0:3001/
+### Go to: http://0.0.0.0:3001/
+
+
 ### Screenshot of output
 (TBC)
 
