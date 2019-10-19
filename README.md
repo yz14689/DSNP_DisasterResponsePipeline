@@ -1,5 +1,5 @@
 # Project Name 
-Disaster Response Pipeline (Udecity Data Science Narodegree)
+Disaster Response Pipeline (Udecity Data Scientist Narodegree)
 
 ### Required packages
 (see requirements.txt)
@@ -19,27 +19,55 @@ Disaster Response Pipeline (Udecity Data Science Narodegree)
 
 ### File used
 
-#### 1. Input data
+#### 1. Source data (download from Udecity)
 disaster_messages.csv 
 disaster_categories.csv
 
 
 #### 2. ETL pipeline
 #### process.py
+Function:
     Load the datafiles, merge and clean the combined data, save the cleaned data to SQL database for subsequent use
+
+Input:    
+    disaster_messages.csv
+    disaster_categories.csv
+        
+Output:
+    DisasterResponse.db  
 
 
 #### 3. ML pipeline
 #### train_classifer.py
+Function:
     Load the sql database (from ETL), build a text processing and ML pipeline and multi-output RandomForest classifier. 
     Train and tune the model using GridSearch
     Export the trained model as pickle file
 
+Input:    
+    SQL database with TABLE named as 'Disaster' (from ETL pipeline code)
+        
+Output:
+    classifier.pkl
+Inputs:
+
+
+Outputs:
+
 
 #### 4. Final execution code 
 #### run.py 
+Function:    
+    Execute the builtup web app
+     
+Input:    
+    SQL database 'DisasterResponse.db' with table named as 'Disaster' (from ELT code)
+    classifier.pkl (from ML pipeline code)
+        
+Output:
+    Model summary
 
-
+# Go to: http://0.0.0.0:3001/
 ### Screenshot of output
 (TBC)
 
