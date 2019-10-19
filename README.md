@@ -1,8 +1,19 @@
 # Project Name 
 Disaster Response Pipeline (Udecity Data Scientist Narodegree)
 
-### Required packages
-(see requirements.txt)
+### Required packages (details see requirements.txt)
+sys
+pandas 
+sqlite3
+re
+nltk
+pickle
+numpy 
+json
+plotly
+flask 
+sklearn.
+sqlalchemy 
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
