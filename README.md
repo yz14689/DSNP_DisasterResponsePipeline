@@ -2,18 +2,18 @@
 ## Disaster Response Pipeline (Udecity Data Scientist Narodegree)
 
 ### Required packages (details see requirements.txt)
-sys
-pandas 
-sqlite3
-re
-nltk
-pickle
-numpy 
-json
-plotly
-flask 
-sklearn.
-sqlalchemy 
+    sys
+    pandas 
+    sqlite3
+    re
+    nltk
+    pickle
+    numpy 
+    json
+    plotly
+    flask 
+    sklearn.
+    sqlalchemy 
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -31,8 +31,8 @@ sqlalchemy
 ### File used
 
 #### 1. Source data (download from Udecity)
-disaster_messages.csv 
-disaster_categories.csv
+    disaster_messages.csv 
+    disaster_categories.csv
 
 
 #### 2. ETL pipeline
@@ -75,10 +75,10 @@ Input:
 Output:
     Web app page
     
-(Note:
-The master.html is updated with the desired information to be shown on the final web page. These files are saved in folder 'templates', as the folder name is defined in flask doc)
+    (Note:
+    The master.html is updated with the desired information to be shown on the final web page. These files are saved in folder 'templates', as the folder name is defined in flask doc)
 
-### Go to: http://0.0.0.0:3001/
+#### 5. Go to: http://0.0.0.0:3001/
 #### This command is for working in Udecity workspace. Given I am working on local PC, I use http://localhost:3001 as web output.
 
 Function:    
