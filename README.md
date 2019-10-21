@@ -62,7 +62,7 @@ Output:
     classifier.pkl
  
 
-#### 4. Final execution code 
+#### 4. Execution code 
 #### run.py 
 Function:    
     Execute the builtup web app
@@ -70,13 +70,22 @@ Function:
 Input:    
     SQL database 'DisasterResponse.db' with table named as 'Disaster' (from ELT code)
     classifier.pkl (from ML pipeline code)
+    Web supporting files: go.html and master.html 
         
 Output:
-    Model summary
+    Web app page
+    
+(Note:
+The master.html is updated with the desired information to be shown on the final web page. These files are saved in folder 'templates', as the folder name is defined in flask doc)
 
 ### Go to: http://0.0.0.0:3001/
+#### This command is for working in Udecity workspace. Given I am working on local PC, I use http://localhost:3001 as web output.
+
+Function:    
+    Present the content of pre-defined web app, including the charts and the online user-entered message classifier function
 
 
 ### Screenshot of output
-(TBC)
+
+See the file named as "DSNP Disaster Response Pipeline_Output_to github.docx".
 
