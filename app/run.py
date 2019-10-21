@@ -86,32 +86,81 @@ model = joblib.load("../models/classifier.pkl") # specify the trained model pack
 def index():
    
    # extract data needed for visuals
-   # TODO: Below is an example - modify to extract data for your own visuals
-    genre_counts = df.groupby('genre').count()['message']
-    genre_names = list(genre_counts.index)
+    # Calculate message count by genre and requested status    
+    genre_requested = df[df['request']==1].groupby('genre')['message'].count() 
+    genre_not_requested = df[df['request']==0].groupby('genre')['message'].count() 
+    genre_names = list(genre_requested.index)
    
+
+    # Calculate message count by genre and death/missing people 
+    genre_death = df[df['death']==1].groupby('genre')['message'].count() 
+    genre_missing_people = df[df['missing_people']==1].groupby('genre')['message'].count() 
+    genre_names = list(genre_death.index) 
+    
+    
    # create visuals
-   # TODO: Below is an example - modify to create your own visuals
     graphs = [
-        {
+        { # data 1
             'data': [
                 Bar(
                     x=genre_names,
-                    y=genre_counts
+                    y= genre_requested,  # to be revised
+                    name = 'Count of Requested'
+               ),
+                
+                Bar(
+                    x=genre_names,
+                    y=genre_not_requested, # to be revised
+                    name = 'Count of Not Requested'
                )
+                
            ],
 
            'layout': {
-               'title': 'Distribution of Message Genres',
+               'title': 'Distribution of Message by Genres and Requested',
                'yaxis': {
                    'title': "Count"
                },
                'xaxis': {
                    'title': "Genre"
-                }
+                } ,
+               'barmode': 'group'
             }
-        }
+        } # end of data1
+        
+        {  # data 2
+            'data': [
+                Bar(
+                    x=genre_names,
+                    y=genre_death,  # to be revised
+                    name = 'Count of Death'
+               ) ,
+                
+                Bar(
+                    x=genre_names,
+                    y=genre_missing_people,  # to be revised
+                    name = 'Count of Missing People'
+               ) ,
+                
+                
+                
+           ],
+
+           'layout': {
+               'title': 'Distribution of Message by Genres and Dealth/Missing People',
+               'yaxis': {
+                   'title': "Count"
+               },
+               'xaxis': {
+                   'title': "Genre"
+                },
+               'barmode': 'group'
+            }
+        } # end of data2
+        
+        
     ]
+   
    
    # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
