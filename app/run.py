@@ -126,7 +126,7 @@ def index():
                 } ,
                'barmode': 'group'
             }
-        } # end of data1
+        }, # end of data1
         
         {  # data 2
             'data': [
