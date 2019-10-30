@@ -1,5 +1,5 @@
 # Project Name 
-## Disaster Response Pipeline (Udecity Data Scientist Narodegree)
+## Disaster Response Pipeline (Udacity Data Scientist Narodegree)
 
 ### Required packages (details see requirements.txt)
     sys
